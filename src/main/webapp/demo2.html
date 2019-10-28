@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:click</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+	<body>
+		<div id="name">
+			{{name}}
+			<button v-on:click="fun('李四')">onclick</button> //v-on:click和onclick用法相同
+		</div>
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el:"#name",
+			data:{
+			    name:"张三"
+			},
+			methods:{
+				fun:function(a){
+				    alert("更改姓名");
+				    this.name = a;
+				}
+			}
+		});
+
+	</script>
+</html> 
